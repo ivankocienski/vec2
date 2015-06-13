@@ -4,8 +4,14 @@
   :author "Your Name <your.name@example.com>"
   :license ""
   :serial t
-  :depends-on (lispbuilder-sdl cl-opengl)
-  :components ((:file "src/vec2")
-	       (:file "src/package")
-	       (:file "src/demo")))
+  :components ((:file "src/vec2")))
+
+(asdf:defsystem #:vec2-demo
+  :description "Some demo code giving you a taste of vec2"
+  :author "Your Name <your.name@example.com>"
+  :license ""
+  :serial t
+  :depends-on (lispbuilder-sdl vec2 cl-doc)
+  :components ((:file "src/demo/package")
+	       (:file "src/demo/main")))
 

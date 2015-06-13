@@ -4,6 +4,8 @@
 (defpackage :vec2
   (:use :cl)
   (:export ;; ...
+   :x
+   :y
    :new
    :new-xy
    :copy
@@ -28,8 +30,8 @@
 
 (defstruct vec2 x y)
 
-(defun x (v) (vec2-x v))
-(defun y (v) (vec2-y v))
+(defmacro x (v) `(vec2::vec2-x ,v))
+(defmacro y (v) `(vec2::vec2-y ,v))
 
 (defun new ()
   "Returns a new vec2 object"

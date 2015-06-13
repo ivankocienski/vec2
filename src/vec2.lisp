@@ -24,9 +24,12 @@
    :normal
    :normalize!
    :perpendicular
+   :==
    ))
 
 (in-package :vec2)
+
+(defparameter *comparison-threshold* 0.01)
 
 (defstruct vec2 x y)
 
@@ -140,8 +143,13 @@
     v))
 
 (defun perpendicular (v)
+  "Return a vector that is the tangent of the input vector"
   (make-vector
    :x (- (vec2-y v))
    :y (vec2-x v)))
     
-
+(defun == (v1 v2)
+  "Threshold based comparison of two vectors"
+  (and
+   (< (abs (- (vec2-x v1) (vec2-x v2))) *comparison-threshold*)
+   (< (abs (- (vec2-y v1) (vec2-y v2))) *comparison-threshold*)))

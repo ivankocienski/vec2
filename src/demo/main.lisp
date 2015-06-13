@@ -14,4 +14,11 @@
 
   (setf (vec2:y *v1*) 10)
 
-  (format t "v1.y=~a~%" (vec2:y *v1*)))
+  (format t "v1.y=~a~%" (vec2:y *v1*))
+
+  (if (vec2:== (vec2:new-xy 10 20) (vec2:new-xy 10 20))
+      (format t "vectors are equal~%"))
+
+  (unless (vec2:== (vec2:new-xy 50 25) (vec2:new-xy 100 10))
+    (format t "vectors are not equal~%"))
+  )

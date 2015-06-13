@@ -11,7 +11,7 @@
   :author "Your Name <your.name@example.com>"
   :license ""
   :serial t
-  :depends-on (lispbuilder-sdl vec2 cl-doc)
+  :depends-on (vec2)
   :components ((:file "src/demo/package")
 	       (:file "src/demo/main")))
 

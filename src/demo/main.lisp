@@ -8,6 +8,10 @@
 (defun demo ()
   "Entry point for demo"
   
-  (format t "v1.x=~a~%" (vec2:x *v1*))
+  (format t "v2.x=~a~%" (vec2:x *v2*))
 
-  (format t "v1.magnitude=~a~%" (vec2:magnitude *v1*)))
+  (format t "v2.magnitude=~a~%" (vec2:magnitude *v2*))
+
+  (setf (vec2:y *v1*) 10)
+
+  (format t "v1.y=~a~%" (vec2:y *v1*)))

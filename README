@@ -1,0 +1,8 @@
+
+vec2 - A 2D vector library
+==========================
+
+Simple 2D vector library to plonk in ~/quicklisp/local-projects
+
+See src/demo for a sample of how it is used. Read the incredibly
+simple source for the documentation. It really is that straightforward.
